@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 头 -->
+    <header>
+      <div class="logo">番茄科技</div>
+      <nav>
+        <a href="#">首页</a>
+        <a href="#">关于我们</a>
+        <a href="#">成功案例</a>
+        <a href="#">服务流程</a>
+        <a href="#">团队介绍</a>
+        <a href="#">公司动态</a>
+        <i class="fas fa-search"></i>
+        <div class="burger">
+          <div class="burger-line1"></div>
+          <div class="burger-line2"></div>
+          <div class="burger-line3"></div>
+        </div>
+      </nav>
+    </header>
+    <!-- 轮播图 -->
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <!-- 轮播容器 -->
+        <div class="glide__slides">
+          <!-- 轮播item -->
+          <div class="glide__slide">
+            <!-- 标题 -->
+            <div class="slide-caption">
+              <h1>大闹五台山</h1>
+              <h3>院内添了个鲁智深，显得格格不入，别人打坐参禅，智深却鼾声大作，众僧听讲经文，智深却东张西望，智深更醉打门子、火工，闹得寺院鸡飞狗跳。</h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <div class="backdrop"></div>
+            <img src="./images/people-in-couch-1024248.jpg" alt="" />
+          </div>
+          <!-- 轮播item -->
+          <div class="glide__slide">
+            <!-- 标题 -->
+            <div class="slide-caption left">
+              <h1>倒拔垂杨柳</h1>
+              <h3>鲁智深到了开封大相国寺，寺内的菜园经常有一批以张三为首的滋事份子骚扰，看菜园的老和尚管不了他们，于是让智深当了这个菜园管长。</h3>
+              <button class="explore-btn">探索更多</button>
+            </div>
+            <div class="backdrop"></div>
+            <video src="videos/working-man.mp4" muted autoplay loop></video>
+          </div>
+        </div>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <!-- 区域 -->
+      <!-- 关于我们 -->
+      <section class="about-us">
+        <h2 class="title1">关于我们</h2>
+        <p class="intro">全书通过描写梁山好汉反抗欺压、水泊梁山壮大和受宋朝招安，以及受招安后为宋朝征战，最终消亡的宏大故事</p>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-lightbulb"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-line"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shopping-cart"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-desktop"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-server"></i>
+            <h4 class="feature-title">宋江</h4>
+            <p class="feature-content">宋江原为山东郓城县押司，他和晁盖互通往来的事被阎婆惜发现，</p>
+          </div>
+        </div>
+      </section>
+      <!-- 成功案例 -->
+      <section class="showcases section-bg">
+        <h2 class="title1">成功案例</h2>
+        <div class="filter-btns">
+          <button class="filter-btn active">全部</button>
+          <button class="filter-btn">WEB</button>
+          <button class="filter-btn">移动</button>
+          <button class="filter-btn">科研</button>
+        </div>
+        <div class="cases">
+          <div class="case-item">
+            <img src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/photo-of-imac-near-macbook-1029757.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/apple-apple-device-design-desk-285814.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/apple-laptop-notebook-office-39284.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/person-holding-a-smartphone-892757.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/person-using-black-and-white-smartphone-and-holding-blue-230544.jpg" alt="">
+          </div>
+          <div class="case-item">
+            <img src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <script src="./libs/anime/anime.min.js"></script>
+    <script src="./libs/glide/glide.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
