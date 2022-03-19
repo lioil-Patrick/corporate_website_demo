@@ -4,33 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" />
+    <!-- <link rel="stylesheet" href="./libs/font-awesome/all.css"> -->
     <title>Document</title>
   </head>
   <body>
     <!-- 头 -->
-    <header>
+    <!-- open这个类用来判断是否为展开 -->
+    <header class="open">
       <div class="logo">番茄科技</div>
       <nav>
-        <a href="#">首页</a>
-        <a href="#">关于我们</a>
-        <a href="#">成功案例</a>
-        <a href="#">服务流程</a>
-        <a href="#">团队介绍</a>
-        <a href="#">公司动态</a>
+        <a href="#home">首页</a>
+        <a href="#about-us">关于我们</a>
+        <a href="#showcases">成功案例</a>
+        <a href="#service">服务流程</a>
+        <a href="#team-intro">团队介绍</a>
+        <a href="#company-activities">公司动态</a>
         <i class="fas fa-search"></i>
-        <div class="burger">
-          <div class="burger-line1"></div>
-          <div class="burger-line2"></div>
-          <div class="burger-line3"></div>
-        </div>
       </nav>
+      <div class="burger">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
     </header>
     <!-- 轮播图 -->
-    <div class="glide">
+    <div id="home" class="glide">
       <div class="glide__track" data-glide-el="track">
         <!-- 轮播容器 -->
         <div class="glide__slides">
@@ -70,7 +73,7 @@
     <div class="content-wrapper">
       <!-- 区域 -->
       <!-- 关于我们 -->
-      <section class="about-us">
+      <section id="about-us" class="about-us">
         <h2 class="title1">关于我们</h2>
         <p class="intro">全书通过描写梁山好汉反抗欺压、水泊梁山壮大和受宋朝招安，以及受招安后为宋朝征战，最终消亡的宏大故事</p>
         <div class="features">
@@ -107,42 +110,295 @@
         </div>
       </section>
       <!-- 成功案例 -->
-      <section class="showcases section-bg">
+      <section id="showcases" class="showcases section-bg">
         <h2 class="title1">成功案例</h2>
         <div class="filter-btns">
-          <button class="filter-btn active">全部</button>
-          <button class="filter-btn">WEB</button>
-          <button class="filter-btn">移动</button>
-          <button class="filter-btn">科研</button>
+          <button class="filter-btn active" data-filter="*">全部</button>
+          <button class="filter-btn" data-filter=".web">WEB</button>
+          <button class="filter-btn" data-filter=".mobile">移动</button>
+          <button class="filter-btn" data-filter=".sience">科研</button>
         </div>
         <div class="cases">
-          <div class="case-item">
-            <img src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg" alt="">
+          <div class="case-item web sience">
+            <img src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/photo-of-imac-near-macbook-1029757.jpg" alt="">
+          <div class="case-item web sience">
+            <img src="images/photo-of-imac-near-macbook-1029757.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/apple-apple-device-design-desk-285814.jpg" alt="">
+          <div class="case-item web">
+            <img src="images/apple-apple-device-design-desk-285814.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/apple-laptop-notebook-office-39284.jpg" alt="">
+          <div class="case-item sience">
+            <img src="images/apple-laptop-notebook-office-39284.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/person-holding-a-smartphone-892757.jpg" alt="">
+          <div class="case-item mobile">
+            <img src="images/person-holding-a-smartphone-892757.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/person-using-black-and-white-smartphone-and-holding-blue-230544.jpg" alt="">
+          <div class="case-item mobile web">
+            <img src="images/person-using-black-and-white-smartphone-and-holding-blue-230544.jpg" alt="" />
           </div>
-          <div class="case-item">
-            <img src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg" alt="">
+          <div class="case-item mobile sience">
+            <img src="images/blur-close-up-code-computer-546819.jpg" alt="" />
+          </div>
+          <div class="case-item mobile">
+            <img src="images/bokeh-photography-of-person-holding-turned-on-iphone-1440727.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- 服务流程 -->
+      <section id="service" class="service">
+        <h2 class="title1">服务流程</h2>
+        <p class="intro">一些简介...</p>
+        <div class="services">
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">需求沟通</h2>
+            <p class="service-content">眼如丹凤，眉似卧蚕。滴溜溜两耳悬珠，明皎皎双睛点漆。</p>
+          </div>
+        </div>
+      </section>
+      <!-- 团队介绍 -->
+      <section id="team-intro" class="team-intro section-bg">
+        <h2 class="title1">团队介绍</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="./images/man-wearing-black-suit-2955376.jpg" alt="" />
+            </div>
+            <h4 class="name">张紫齐</h4>
+            <p class="position">前端工程师</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="./images/smiling-woman-wearing-black-sweater-1587009.jpg" alt="" />
+            </div>
+            <h4 class="name">张紫齐</h4>
+            <p class="position">前端工程师</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="./images/business-woman-2697954_1920.jpg" alt="" />
+            </div>
+            <h4 class="name">张紫齐</h4>
+            <p class="position">前端工程师</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="./images/selective-focus-photograph-of-man-wearing-gray-suit-jacket-1138903.jpg" alt="" />
+            </div>
+            <h4 class="name">张紫齐</h4>
+            <p class="position">前端工程师</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 数据部分 -->
+      <section id="data-section" class="data-section">
+        <div class="data-piece">
+          <i class="fas fa-code"></i>
+          <div class="num">156</div>
+          <div class="data-desc">行代码</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-code"></i>
+          <div class="num">156</div>
+          <div class="data-desc">行代码</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-code"></i>
+          <div class="num">156</div>
+          <div class="data-desc">行代码</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-code"></i>
+          <div class="num">156</div>
+          <div class="data-desc">行代码</div>
+        </div>
+      </section>
+      <!-- 公司动态 -->
+      <section id="company-activities" class="company-activities">
+        <h2 class="title1">公司动态</h2>
+        <p class="intro">关注公司动态，第一时间获取一手消息</p>
+        <div class="activities">
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/activity01-image.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="data-published"><i class="far fa-calendar"></i>2019年12月1日</p>
+              <p class="comments"><i class="far fa-comments"></i>33条</p>
+            </div>
+            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <article>
+              唇方口正，髭须地阁轻盈；额阔顶平，皮肉天仓饱满。坐定时浑如虎相，走动时有若狼形。年及三旬，有养济万人之度量；身躯六尺，怀扫除四海之心机。志气轩昂，胸襟秀丽。
+            </article>
+            <button class="read-more-btn">阅读更多</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/red-suspension-bridge-3493772.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="data-published"><i class="far fa-calendar"></i>2019年12月1日</p>
+              <p class="comments"><i class="far fa-comments"></i>33条</p>
+            </div>
+            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <article>
+              唇方口正，髭须地阁轻盈；额阔顶平，皮肉天仓饱满。坐定时浑如虎相，走动时有若狼形。年及三旬，有养济万人之度量；身躯六尺，怀扫除四海之心机。志气轩昂，胸襟秀丽。
+            </article>
+            <button class="read-more-btn">阅读更多</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/watercrafts-on-river-3464632.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="data-published"><i class="far fa-calendar"></i>2019年12月1日</p>
+              <p class="comments"><i class="far fa-comments"></i>33条</p>
+            </div>
+            <h2 class="act-title">提供互联网接入的ISP公司</h2>
+            <article>
+              唇方口正，髭须地阁轻盈；额阔顶平，皮肉天仓饱满。坐定时浑如虎相，走动时有若狼形。年及三旬，有养济万人之度量；身躯六尺，怀扫除四海之心机。志气轩昂，胸襟秀丽。
+            </article>
+            <button class="read-more-btn">阅读更多</button>
           </div>
         </div>
       </section>
     </div>
-    
+    <footer>
+      <div class="footer-menus">
+        <div class="contact-us">
+          <p class="menu-title">联系我们</p>
+          <p>地址：中国xx省xx市xx路商务中心10号楼</p>
+          <p>电话</p>
+          <p>传真</p>
+          <p>电子邮件：1824010333@qq.com</p>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">服务概览</p>
+          <ul class="menu-items">
+            <li><a href="#">网站建设</a></li>
+            <li><a href="#">域名购买</a></li>
+            <li><a href="#">网页设计</a></li>
+            <li><a href="#">移动应用</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">成功案例</p>
+          <ul class="menu-items">
+            <li><a href="#">桌面网站</a></li>
+            <li><a href="#">移动网站</a></li>
+            <li><a href="#">科研网站</a></li>
+            <li><a href="#">软件应用</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">公司动态</p>
+          <ul class="menu-items">
+            <li><a href="#">信息公开</a></li>
+            <li><a href="#">最近新闻</a></li>
+            <li><a href="#">最新博客</a></li>
+          </ul>
+        </div>
+        <div class="service-menu footer-menu">
+          <p class="menu-title">帮助与支持</p>
+          <ul class="menu-items">
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#">文档资源</a></li>
+          </ul>
+        </div>
+        <p class="icp-info">陕ICP备19016694号</p>
+        <p class="rights">&copy; 2020 智慧科技有限公司</p>
+        <div class="scroll-to-top">
+          <a href="#home"><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./libs/isotope/isotope.pkgd.min.js"></script>
     <script src="./libs/anime/anime.min.js"></script>
     <script src="./libs/glide/glide.min.js"></script>
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
