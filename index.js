@@ -106,14 +106,28 @@ window.addEventListener('scroll', () => {
 })
 
 // 属性选择器，nav下a元素中，href属性的值以#开头的
-const scroll = new SmoothScroll('nav a[href*="#"], .scroll-to-top a[href*="#"]', { // 传入所有需要添加的节点
+const scroll = new SmoothScroll('nav a[href*="#"], .scroll-to-top a[href*="#"]', {
+  // 传入所有需要添加的节点
   header: 'header',
-  offset: 80
+  offset: 80,
+})
+
+// 打开折叠菜单的情况下，点击一个菜单，开始滑动后隐藏白色背景菜单
+document.addEventListener('scrollStart', () => {
+  if (headerEl.classList.contains('open')) {
+    headerEl.classList.remove('open')
+  }
 })
 
 const exploreEls = document.querySelectorAll('.explore-btn')
-exploreEls.forEach(el => {
+exploreEls.forEach((el) => {
   el.addEventListener('click', () => {
     scroll.animateScroll(document.querySelector('#about-us'))
   })
+})
+
+// 折叠按钮
+const burgerEl = document.querySelector('.burger')
+burgerEl.addEventListener('click', () => {
+  headerEl.classList.toggle('open')
 })
