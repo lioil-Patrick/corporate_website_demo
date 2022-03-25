@@ -131,3 +131,69 @@ const burgerEl = document.querySelector('.burger')
 burgerEl.addEventListener('click', () => {
   headerEl.classList.toggle('open')
 })
+
+// 图片懒加载 使用 IntersectionObserver 观察元素是否可见
+// function query(selector) {
+//   return Array.from(document.querySelectorAll(selector))
+// }
+// var io = new IntersectionObserver(function (items) {
+//   items.forEach(function (item) {
+//     var target = item.target
+//     if (target.getAttribute('src') == 'images/loading.gif') {
+//       target.src = target.getAttribute('data-src')
+//     }
+//   })
+// })
+// query('img').forEach(function (item) {
+//   io.observe(item)
+// })
+
+// 节流
+function throttle(fn, delay, atleast) {
+  var timeout = null,
+    startTime = new Date()
+  return function () {
+    var curTime = new Date()
+    clearTimeout(timeout)
+    if (curTime - startTime >= atleast) {
+      fn()
+      startTime = curTime
+    } else {
+      timeout = setTimeout(fn, delay)
+    }
+  }
+}
+// function lazyload() {
+//   var images = document.getElementsByTagName('img')
+//   var n = 0 //存储图片加载到的位置，避免每次都从第一张图片开始遍历
+//   return function () {
+//     var seeHeight = document.documentElement.clientHeight
+//     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+//     for (var i = n; i < images.length; i++) {
+//       if (images[i].offsetTop < seeHeight + scrollTop) {
+//         if (images[i].getAttribute('src') === 'images/loading.gif') {
+//           images[i].src = images[i].getAttribute('data-src')
+//         }
+//         n = n + 1
+//       }
+//     }
+//   }
+// }
+function lazyload() {
+  const images = document.querySelectorAll('img')
+  var n = 0
+  return function () {
+    for (let i = n; i < images.length; i++) {
+      if (images[i].getBoundingClientRect().top < innerHeight) {
+        // 从上往下滚动，图片出现
+        if (images[i].getAttribute('src') === 'images/loading.gif') {
+          // 筛选出了src设置成了images/loading.gif的图片，表示需要懒加载
+          images[i].src = images[i].getAttribute('data-src')
+        }
+      }
+    }
+  }
+}
+var loadImages = lazyload()
+loadImages() //初始化首页的页面图片
+window.addEventListener('scroll', throttle(loadImages, 500, 1000), false)
